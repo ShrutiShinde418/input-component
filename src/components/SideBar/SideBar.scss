@@ -1,0 +1,39 @@
+.sidebar {
+  background-color: var(--light-gray);
+  padding: 2.5rem 5rem 3rem 3.5rem;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0;
+  margin-bottom: 8rem;
+
+  span {
+    color: var(--red);
+  }
+}
+
+.navbar {
+  padding: 0;
+  list-style-type: none;
+  font-family: "Noto Sans JP";
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.navLink {
+  color: var(--gray1);
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.active {
+  color: var(--black2);
+  text-decoration: none;
+  font-weight: 700;
+}
