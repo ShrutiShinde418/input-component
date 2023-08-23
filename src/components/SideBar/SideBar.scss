@@ -1,5 +1,7 @@
+@import "../../App";
+
 .sidebar {
-  background-color: var(--light-gray);
+  background-color: $light-gray;
   padding: 2.5rem 5rem 3rem 3.5rem;
   min-height: 100vh;
 }
@@ -12,7 +14,7 @@ h1 {
   margin-bottom: 8rem;
 
   span {
-    color: var(--red);
+    color: $red;
   }
 }
 
@@ -26,14 +28,14 @@ h1 {
 }
 
 .navLink {
-  color: var(--gray1);
+  color: $gray1;
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 500;
 }
 
 .active {
-  color: var(--black2);
+  color: $black2;
   text-decoration: none;
   font-weight: 700;
 }

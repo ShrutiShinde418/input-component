@@ -19,8 +19,11 @@ const Input = (props) => {
           value={props.value}
           id={props.id}
         />
+        {props.helperText && (
+          <p className={props.helperClass}>{props.helperText}</p>
+        )}
       </form>
-      {/* {props.icon && <img src={icon} alt="local_grocery_store" />} */}
+      {/* <img src={icon} alt="local_grocery_store" /> */}
     </div>
   );
 };

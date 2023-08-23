@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import SideBar from "./components/SideBar/SideBar";
 import InputPage from "./pages/InputPage";
 

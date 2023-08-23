@@ -1,12 +1,14 @@
+@import "../../App";
+
 .heading {
   font-weight: 400;
   font-size: 12px;
   font-family: "Noto Sans Mono";
-  color: var(--black3);
+  color: $black3;
 }
 
 .state {
-  color: var(--gray3);
+  color: $gray3;
   font-family: "Noto Sans Mono";
   font-weight: 400;
   font-size: 12px;
