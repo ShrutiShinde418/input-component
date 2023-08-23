@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-family: "Noto Sans JP";
+  label {
+    font-size: 12px;
+  }
+  input {
+    font-family: inherit;
+    font-weight: 500;
+  }
+}
+
+.default {
+  @extend .input-sm;
+}
+
+.input-sm {
+  padding: 1rem 0.85rem;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.border-default {
+  border: 1px solid var(--gray3);
+}

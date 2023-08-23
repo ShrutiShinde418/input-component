@@ -1,10 +1,12 @@
 import "./App.css";
 import SideBar from "./components/SideBar/SideBar";
+import InputPage from "./pages/InputPage";
 
 function App() {
   return (
     <div className="app">
       <SideBar />
+      <InputPage />
     </div>
   );
 }

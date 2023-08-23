@@ -1,7 +1,7 @@
 import React from "react";
 import "./SideBar.scss";
 
-const links = ["Colors", "Typography", "Spaces", "Buttons", "Inputs", "Grid"];
+const links = ["Typography", "Grid", "Buttons", "Inputs"];
 
 const SideBar = () => {
   return (
