@@ -5,27 +5,57 @@ main {
   flex-direction: column;
   margin: 1.5rem 0rem 0 5rem;
   padding-right: 6rem;
+
+  .grid-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    align-items: self-start;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+  }
+
+  h2 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 24px;
+    color: $gray2;
+  }
+
   div {
     margin-bottom: 1rem;
   }
-}
 
-.grid-1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
-  align-items: self-start;
-}
+  @media (max-width: 1290px) {
+    & {
+      padding-right: 0;
+      margin-left: 3.5rem;
+    }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10rem;
-}
+    .grid-1 {
+      gap: 2.5rem;
+    }
 
-h2 {
-  font-family: "Poppins";
-  font-weight: 500;
-  font-size: 24px;
-  color: $gray2;
+    .grid-2 {
+      gap: 5rem;
+    }
+  }
+
+  @media (max-width: 1030px) {
+    .grid-1,
+    .grid-2 {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    & {
+      padding-right: 3rem;
+    }
+  }
 }

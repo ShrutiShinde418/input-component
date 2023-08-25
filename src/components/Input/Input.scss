@@ -1,5 +1,19 @@
 @import "../../App";
 
+$helper-classes: (
+  "default": $gray3,
+  "error": $danger,
+);
+$sizes: (
+  "sm": 0.5rem 0.7rem,
+  "md": 1rem 0.85rem,
+);
+$buttons: (
+  "default": $gray3,
+  "primary": $primary,
+  "danger": $danger,
+);
+
 form {
   display: flex;
   flex-direction: column;
@@ -17,18 +31,13 @@ form {
   }
 }
 
-.helper-text-default {
-  font-family: inherit;
-  font-size: 10px;
-  margin: 0;
-  color: $gray3;
-}
-
-.helper-text-error {
-  font-family: inherit;
-  font-size: 10px;
-  margin: 0;
-  color: $danger;
+@each $class, $helper-color in $helper-classes {
+  .helper-text-#{$class} {
+    font-family: inherit;
+    font-size: 10px;
+    margin: 0;
+    color: $helper-color;
+  }
 }
 
 .btn {
@@ -36,26 +45,15 @@ form {
   font-size: 14px;
 }
 
-.input-md {
-  @extend .btn;
-  padding: 1rem 0.85rem;
-}
+@each $size, $value in $sizes {
+  .input-#{$size} {
+    @extend .btn;
+    padding: $value;
+  }
 
-.input-sm {
-  @extend .btn;
-  padding: 0.5rem 0.7rem;
-}
-
-.default-md {
-  @extend .input-md;
-}
-
-.default-sm {
-  @extend .input-sm;
-}
-
-.border-default {
-  border: 1px solid $gray3;
+  .default-#{$size} {
+    @extend .input-#{$size};
+  }
 }
 
 .default-hover {
@@ -63,25 +61,19 @@ form {
   border: 1px solid $black3;
 }
 
-.border-primary {
-  border: 1px solid $primary;
-}
+@each $class, $color in $buttons {
+  .border-#{$class} {
+    border: 1px solid $color;
+  }
 
-.border-danger {
-  border: 1px solid $danger;
+  .#{$class} {
+    color: $color;
+  }
 }
 
 .border-disabled {
   border: 1px solid $button-gray1;
   background-color: $gray5;
-}
-
-.primary {
-  color: $primary;
-}
-
-.danger {
-  color: $danger;
 }
 
 .full-width {
@@ -107,4 +99,3 @@ textarea {
   top: 37px;
   right: 10px;
 }
-
