@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 
 const InputPage = () => {
   return (
-    <main className="main">
+    <main>
       <h2>Inputs</h2>
       <div className="grid-1">
         <Input
@@ -13,7 +13,7 @@ const InputPage = () => {
           label="Label"
           type="text"
           headingClass="heading"
-          class="default border-default"
+          class="default-md border-default"
         />
         <Input
           title="&:hover"
@@ -27,7 +27,7 @@ const InputPage = () => {
           label="Label"
           type="text"
           headingClass="state"
-          class="border-primary default"
+          class="border-primary default-md"
           labelClass="primary"
         />
       </div>
@@ -37,7 +37,7 @@ const InputPage = () => {
           label="Label"
           type="text"
           headingClass="heading"
-          class="default border-danger"
+          class="default-md border-danger"
           labelClass="danger"
         />
         <Input
@@ -52,7 +52,7 @@ const InputPage = () => {
           label="Label"
           type="text"
           headingClass="state"
-          class="border-danger default"
+          class="border-danger default-md"
           labelClass="danger"
         />
       </div>
@@ -62,29 +62,94 @@ const InputPage = () => {
           label="Label"
           type="text"
           headingClass="heading"
-          class="default border-disabled"
+          class="default-md border-disabled"
           disabled
         />
       </div>
       <div className="grid-2">
         <Input
-          title="<Input helperText='Some interesting text' />"
+          title='<Input helperText="Some interesting text" />'
           helperText="Some interesting text"
           helperClass="helper-text-default"
           label="Label"
           type="text"
           headingClass="heading"
-          class="default border-default"
+          class="default-md border-default"
         />
         <Input
-          title="<Input helperText='Some interesting text' error />"
+          title='<Input helperText="Some interesting text" error />'
           label="Label"
           helperText="Some interesting text"
           helperClass="helper-text-error"
           type="text"
           headingClass="heading"
           labelClass="danger"
-          class="default border-danger"
+          class="default-md border-danger"
+        />
+      </div>
+      <div className="grid-2">
+        <Input
+          title="<Input startIcon />"
+          label="Label"
+          type="text"
+          headingClass="heading"
+          class="default-md border-default startIcon"
+          startIcon
+        />
+        <Input
+          title="<Input endIcon />"
+          label="Label"
+          type="text"
+          headingClass="heading"
+          labelClass="default"
+          class="default-md border-default endIcon"
+          endIcon
+        />
+      </div>
+      <div className="grid-2">
+        <Input
+          title='<Input value="Text" />'
+          label="Label"
+          type="text"
+          headingClass="heading"
+          class="default-md border-default"
+          value="Text"
+        />
+      </div>
+      <div className="grid-2">
+        <Input
+          title='<Input size="sm" />'
+          label="Label"
+          type="text"
+          headingClass="heading"
+          class="default-sm border-default"
+        />
+        <Input
+          title='<Input size="md" />'
+          label="Label"
+          type="text"
+          headingClass="heading"
+          labelClass="heading"
+          class="default-md border-default"
+        />
+      </div>
+      <div>
+        <Input
+          title="<Input fullWidth />"
+          label="Label"
+          type="text"
+          headingClass="heading"
+          class="default-md border-default full-width"
+        />
+      </div>
+      <div className="grid-1">
+        <Input
+          title='<Input multiline row="4" />'
+          label="Label"
+          type="textarea"
+          headingClass="heading"
+          class="default-md border-default"
+          rows={8}
         />
       </div>
       <Footer />

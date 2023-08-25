@@ -5,6 +5,7 @@ form {
   flex-direction: column;
   gap: 0.25rem;
   font-family: "Noto Sans JP";
+  position: relative;
 
   label {
     font-size: 12px;
@@ -30,13 +31,26 @@ form {
   color: $danger;
 }
 
-.input-sm {
-  padding: 1rem 0.85rem;
+.btn {
   border-radius: 8px;
   font-size: 14px;
 }
 
-.default {
+.input-md {
+  @extend .btn;
+  padding: 1rem 0.85rem;
+}
+
+.input-sm {
+  @extend .btn;
+  padding: 0.5rem 0.7rem;
+}
+
+.default-md {
+  @extend .input-md;
+}
+
+.default-sm {
   @extend .input-sm;
 }
 
@@ -45,7 +59,7 @@ form {
 }
 
 .default-hover {
-  @extend .input-sm;
+  @extend .input-md;
   border: 1px solid $black3;
 }
 
@@ -69,3 +83,28 @@ form {
 .danger {
   color: $danger;
 }
+
+.full-width {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+.startIcon {
+  padding-left: 3rem;
+}
+
+.startIcon-btn {
+  position: absolute;
+  top: 37px;
+  left: 10px;
+}
+
+.endIcon-btn {
+  position: absolute;
+  top: 37px;
+  right: 10px;
+}
+

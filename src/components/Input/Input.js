@@ -11,19 +11,40 @@ const Input = (props) => {
         <label className={props.labelClass} for={props.for}>
           {props.label}
         </label>
-        <input
-          type={props.type}
-          className={classNames(props.class)}
-          disabled={props.disabled}
-          placeholder="Placeholder"
-          value={props.value}
-          id={props.id}
-        />
+        {props.type === "textarea" ? (
+          <textarea
+            placeholder="Placeholder"
+            value={props.value}
+            id={props.id}
+            name={props.name}
+            className={classNames(props.class)}
+            disabled={props.disabled}
+            rows={props.rows}
+            cols={props.cols}
+          ></textarea>
+        ) : (
+          <input
+            type={props.type}
+            className={classNames(props.class)}
+            disabled={props.disabled}
+            placeholder="Placeholder"
+            value={props.value}
+            name={props.name}
+            id={props.id}
+            startIcon={props.startIcon}
+            endIcon={props.endIcon}
+          />
+        )}
+        {props.startIcon && (
+          <span className="material-symbols-outlined startIcon-btn">call</span>
+        )}
+        {props.endIcon && (
+          <span className="material-symbols-outlined endIcon-btn">lock</span>
+        )}
         {props.helperText && (
           <p className={props.helperClass}>{props.helperText}</p>
         )}
       </form>
-      {/* <img src={icon} alt="local_grocery_store" /> */}
     </div>
   );
 };
